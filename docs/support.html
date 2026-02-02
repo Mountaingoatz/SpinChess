@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Spin Chess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1c26;
+            --gold: #c9a84c;
+            --gold-dim: #a08339;
+            --text: #d4d4d8;
+            --text-muted: #8b8b96;
+            --border: #2a2c38;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            z-index: 100;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+        }
+
+        header a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        header .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        header .crown { font-size: 1.1rem; }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            margin-left: auto;
+        }
+
+        nav a {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            border-bottom: none;
+        }
+
+        nav a:hover { color: var(--gold); }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 5rem;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #e8e8ec;
+            margin-top: 2.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold-dim);
+            transition: border-color 0.2s;
+        }
+
+        a:hover { border-color: var(--gold); }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #e8e8ec;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .card a {
+            font-size: 0.9rem;
+        }
+
+        .divider {
+            width: 3rem;
+            height: 1px;
+            background: var(--border);
+            margin: 2.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        footer .crown { font-size: 0.9rem; }
+
+        @media (max-width: 600px) {
+            main { padding: 2rem 1.25rem 3rem; }
+            h1 { font-size: 1.75rem; }
+            .header-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <header>
+        <div class="header-inner">
+            <a href="/">
+                <span class="crown">♛</span>
+                <span class="logo-text">Spin Chess</span>
+            </a>
+            <nav>
+                <a href="/">Privacy Policy</a>
+                <a href="/support">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Support</h1>
+        <p class="subtitle">Need help with Spin Chess? Here's how to get in touch.</p>
+
+        <div class="card">
+            <h3>Report a Bug or Issue</h3>
+            <p>Found something that doesn't work right? Open an issue on GitHub and we'll look into it.</p>
+            <p><a href="https://github.com/Mountaingoatz/SpinChess/issues">Open an Issue on GitHub →</a></p>
+        </div>
+
+        <div class="card">
+            <h3>Email</h3>
+            <p>For general questions, feedback, or anything else:</p>
+            <p><a href="mailto:spinchess@outlook.com">spinchess@outlook.com</a></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>How to Play</h2>
+        <p>Spin Chess is played on a standard 8×8 chess board with one addition: the middle four rows are divided into eight 2×2 grids that you can rotate 180° on your turn.</p>
+        <p>On each turn, you make one piece move (mandatory) and optionally rotate one grid (before or after your move). Use rotations to reposition pieces, clear paths, and create new tactical opportunities.</p>
+        <p>The game can be won by traditional checkmate or by using a rotation to expose the opponent's king and capturing it in the same turn.</p>
+
+        <div class="divider"></div>
+
+        <h2>About</h2>
+        <p>Spin Chess is developed by Mountaingoatz. The app is free, contains no ads, no in-app purchases, and collects no data.</p>
+        <p><a href="/">Privacy Policy</a></p>
+    </main>
+
+    <footer>
+        <span class="crown">♛</span> Spin Chess © 2026 Mountaingoatz
+    </footer>
+</body>
+</html>
